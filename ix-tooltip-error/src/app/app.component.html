@@ -1,0 +1,28 @@
+<div class="d-flex flex-column" style="padding: 4rem">
+  <ix-button variant="primary" data-tooltip="myTooltip">Hover me</ix-button>
+  <ix-tooltip placement="right" for="[data-tooltip='myTooltip']">Some example content</ix-tooltip>
+  <ix-icon name="star"></ix-icon>
+</div>
+<div *ngFor="let element of count"
+     style="display: flex; flex-direction: column; justify-content: center; align-content: center; width: 200px">
+  <ix-button variant="primary" data-tooltip="myTooltipBottom">Hover me</ix-button>
+  <ix-tooltip placement="bottom" for="[data-tooltip='myTooltipBottom']">Some example content</ix-tooltip>
+  <ix-icon name="star"></ix-icon>
+</div>
+
+<ix-blind label="Tooltip ERROR" icon="product" collapsed="true">
+  <div slot="header-actions">
+    <ix-tooltip placement="bottom" for="[data-tooltip='myTooltipBottom']">Some example content</ix-tooltip>
+    <div style="display: flex; justify-content: space-between">
+      <ix-icon name="star" style="margin-right: 7px"></ix-icon>
+      <ix-icon name="highlight" style="margin-right: 7px"></ix-icon>
+      <ix-icon name="star" data-tooltip="myTooltipBottom"></ix-icon>
+    </div>
+  </div>
+</ix-blind>
+<ix-blind label="Tooltip ERROR" icon="product" collapsed="true">
+  <div slot="header-actions">
+    <ix-icon name="star" data-tooltip="myTooltipTop"></ix-icon>
+    <ix-tooltip placement="top" for="[data-tooltip='myTooltipTop']">Some example content</ix-tooltip>
+  </div>
+</ix-blind>
